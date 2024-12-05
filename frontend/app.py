@@ -34,7 +34,7 @@ def insert_pet():
         sociavel: sociavel
     }
     print(data)
-    response = requests.post(f'{API_URL}/api/v1/pets', json=data)
+    response = requests.post(f'{API_URL}/api/v1/pets/', json=data)
     if response.status_code == 201:
         return redirect(url_for('list_pets'))
     else:
@@ -42,7 +42,7 @@ def insert_pet():
 
 @app.route('/stock', methods=['GET'])
 def list_pets():
-    response = requests.get(f'{API_URL}/api/v1/pets')
+    response = requests.get(f'{API_URL}/api/v1/pets/')
     try:
         pets = response.json()
     except requests.exceptions.RequestException:
@@ -120,7 +120,7 @@ def list_sales():
 
 @app.route('/reset-database', methods=['GET'])
 def reset_database():
-    response = requests.delete(f'{API_URL}/api/v1/pets')
+    response = requests.delete(f'{API_URL}/api/v1/pets/')
     if response.status_code == 200:
         return redirect(url_for('list_pets'))
     else:
