@@ -1,0 +1,244 @@
+{
+	"id": "f06711b7-2520-4181-a866-3f7c49e7994c",
+	"name": "C216 Final",
+	"timestamp": "2024-12-06T03:52:49.131Z",
+	"collection_id": "34720445-d9bb99b0-cbf2-4caf-a081-19899e3ebab5",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 12,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-12-06T03:52:47.954Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "84ed2033-e389-4000-a7cf-d11f7919dce4",
+			"name": "Reseta Banco",
+			"url": "http://127.0.0.1:8000/api/v1/pets",
+			"time": 64,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response should confirm deletion": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should confirm deletion": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				64
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response should confirm deletion": true
+				}
+			]
+		},
+		{
+			"id": "65682850-1f00-4da0-a0c2-acf6ea31d021",
+			"name": "Listar todos",
+			"url": "http://127.0.0.1:8000/api/v1/pets",
+			"time": 80,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response should be a list": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be a list": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				80
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response should be a list": true
+				}
+			]
+		},
+		{
+			"id": "dd5202ed-7c41-4111-a1f0-3bba4c9f182b",
+			"name": "Listar por Id",
+			"url": "http://127.0.0.1:8000/api/v1/pets/1",
+			"time": 48,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response should contain product details": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should contain product details": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				48
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response should contain product details": true
+				}
+			]
+		},
+		{
+			"id": "08b377f0-c534-43b1-85da-fddae9887687",
+			"name": "Adicionar",
+			"url": "http://127.0.0.1:8000/api/v1/pets/",
+			"time": 58,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Response should contain confirmation message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should contain confirmation message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				58
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Response should contain confirmation message": true
+				}
+			]
+		},
+		{
+			"id": "63575171-4db7-40de-b0e6-63f8d06869d8",
+			"name": "Atualizar Atributos",
+			"url": "http://127.0.0.1:8000/api/v1/pets/3",
+			"time": 55,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response should confirm update": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should confirm update": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				55
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response should confirm update": true
+				}
+			]
+		},
+		{
+			"id": "b75bc070-6bb5-4c35-b0f7-95daadc26e20",
+			"name": "Remover um",
+			"url": "http://127.0.0.1:8000/api/v1/pets/4",
+			"time": 99,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response should confirm deletion": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should confirm deletion": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				99
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response should confirm deletion": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 404,
+	"collection": {
+		"requests": [
+			{
+				"id": "84ed2033-e389-4000-a7cf-d11f7919dce4",
+				"method": "DELETE"
+			},
+			{
+				"id": "65682850-1f00-4da0-a0c2-acf6ea31d021",
+				"method": "GET"
+			},
+			{
+				"id": "dd5202ed-7c41-4111-a1f0-3bba4c9f182b",
+				"method": "GET"
+			},
+			{
+				"id": "08b377f0-c534-43b1-85da-fddae9887687",
+				"method": "POST"
+			},
+			{
+				"id": "63575171-4db7-40de-b0e6-63f8d06869d8",
+				"method": "PATCH"
+			},
+			{
+				"id": "b75bc070-6bb5-4c35-b0f7-95daadc26e20",
+				"method": "DELETE"
+			}
+		]
+	}
+}

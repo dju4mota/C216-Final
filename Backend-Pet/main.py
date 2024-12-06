@@ -109,6 +109,7 @@ async def listar_pet_por_id(pet_id: int):
 
 @app.patch("/api/v1/pets/{pet_id}")
 async def atualizar_pet(pet_id: int, pet_atualizacao: AtualizarPet):
+    print(pet_atualizacao)
     conn = await get_database()
     try:
         query = "SELECT * FROM pets WHERE id = $1"
@@ -121,12 +122,13 @@ async def atualizar_pet(pet_id: int, pet_atualizacao: AtualizarPet):
             UPDATE pets
             SET nome = COALESCE($1, nome),
                 animal = COALESCE($2, animal),
-                raca = COALESCE($2, raca),
-                idade = COALESCE($3, idade),
-                adotavel = COALESCE($4, adotavel),
-                sociavel = COALESCE($5, sociavel)
-            WHERE id = $6
+                raca = COALESCE($3, raca),
+                idade = COALESCE($4, idade),
+                adotavel = COALESCE($5, adotavel),
+                sociavel = COALESCE($6, sociavel)
+            WHERE id = $7
         """
+        print(update_query)
         await conn.execute(
             update_query,
             pet_atualizacao.nome,
@@ -134,10 +136,12 @@ async def atualizar_pet(pet_id: int, pet_atualizacao: AtualizarPet):
             pet_atualizacao.raca,
             pet_atualizacao.idade,
             pet_atualizacao.adotavel,
-            pet_atualizacao.sociavel            ,
+            pet_atualizacao.sociavel,
             pet_id
         )
         return {"message": "Pet atualizado com sucesso!"}
+    except Exception as e:
+        print(e)
     finally:
         await conn.close()
 
