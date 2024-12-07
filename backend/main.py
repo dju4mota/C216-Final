@@ -22,8 +22,8 @@ class Pet(BaseModel):
     animal: str
     raca: str
     idade: int
-    adotavel: str
-    sociavel: str
+    adotavel: bool
+    sociavel: bool
 
 
 class PetBase(BaseModel):
