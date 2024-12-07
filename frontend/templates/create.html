@@ -17,7 +17,7 @@
     <nav>
       <a href="/">Inicio</a>
       <a href="/cadastro">Cadastro</a>
-      <a href="/listar">Lista Animais</a>
+      <a href="/listar">Lista</a>
     </nav>
   </header>
   <main>
@@ -37,13 +37,13 @@
         <input type="text" id="raca" name="raca" class="form-control" placeholder="Poodle"><br>
 
         <label for="idade" class="form-label">Idade:</label><br>
-        <input type="text" id="idade" name="idade" class="form-control" placeholder="2 anos"><br>
+        <input type="number" id="idade" name="idade" class="form-control" placeholder="2"><br>
 
-        <label for="adotavel" class="form-label">Adotavel:</label><br>
-        <input type="text" id="adotavel" name="adotavel" class="form-control" placeholder="Sim"><br>
         
         <label for="sociavel" class="form-label">Sociavel:</label><br>
         <input type="text" id="sociavel" name="sociavel" class="form-control" placeholder="Sim"><br>
+        
+        <input type="hidden" id="adotavel" name="adotavel" value="Sim" class="form-control" placeholder="Sim"><br>
        
         <input type="submit" value="Inserir" class="btn btn-primary">
       </form>
